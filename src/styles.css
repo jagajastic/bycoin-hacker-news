@@ -10,6 +10,10 @@ body {
   font-size: 12px;
 }
 
+.main-container {
+  background-color: #f6f6ef;
+}
+
 a,
 .btn {
   text-decoration: none;
@@ -93,13 +97,63 @@ header div:nth-child(3) {
   padding-left: 0.7rem;
 }
 
+/* main content */
+
+.main-content-container a:visited {
+  color: #828282;
+}
+
+.main-content-container {
+  font-size: 10.5pt;
+  line-height: 14pt;
+}
+
+.list-number {
+  display: flex;
+  flex-direction: row;
+}
+
+/* triangle shade */
+.shape {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #999999;
+  position: relative;
+  top: 5px;
+  margin-right: 0.7rem;
+  margin-left: 0.18rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  margin: 0.8rem;
+}
+
+.sub-title {
+  font-size: 10px;
+  color: #828282;
+}
+
+.number {
+  font-size: 11pt;
+  color: #828282;
+}
+
+.twitter {
+  font-size: 11px;
+  color: #828282;
+}
+
 /* Desktop view */
 @media screen and (min-width: 780px) {
   body {
     padding: 8px;
   }
   .main-container {
-    width: 100%;
+    width: 85%;
     margin: auto;
   }
 
