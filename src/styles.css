@@ -1,12 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 /* main table head  */
 
+html,
 body {
   padding: 0;
   margin: 0;
   width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 10pt;
+  font-size: 12px;
+}
+
+a,
+.btn {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+li {
+  line-height: 10px;
 }
 
 header {
@@ -19,16 +31,23 @@ header {
 }
 /* Hacker news  */
 header div b {
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
 /* Y logo with border */
 header div:nth-child(1) {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  font-weight: 1000px;
+  width: 18px;
+  height: 18px;
   border: 1px solid white;
-  padding: 0 0.3rem;
   color: white;
 }
 
+/* this enable me offset and float login to the right */
 header div {
   position: relative;
 }
@@ -37,6 +56,9 @@ header div:nth-child(3) {
   position: absolute;
   right: 0;
   font-size: 10pt;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 12px;
 }
 
 /*  columns */
@@ -44,7 +66,8 @@ header div:nth-child(3) {
 .header-col-list ul {
   list-style-type: none;
   display: flex;
-
+  width: 80%;
+  flex-wrap: wrap;
   align-items: center;
   padding-left: 0;
   margin: 0;
@@ -57,7 +80,14 @@ header div:nth-child(3) {
 }
 
 /* target all li except the last item */
-/* .header-col-list ul li:not(:last-child)::after {
+.header-col-list ul li:not(:last-child)::after {
   content: "|";
   padding: 0.15rem;
-} */
+}
+
+/* padding to the header title and list of link  */
+.list {
+  /* border: 1px solid black; */
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+}
