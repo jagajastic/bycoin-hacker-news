@@ -21,10 +21,6 @@ a,
   cursor: pointer;
 }
 
-li {
-  line-height: 10px;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -98,13 +94,15 @@ header div:nth-child(3) {
 }
 
 /* main content */
-
+.main-content-container a {
+  cursor: pointer;
+}
 .main-content-container a:visited {
   color: #828282;
 }
 
 .main-content-container {
-  font-size: 10.5pt;
+  font-size: 11pt;
   line-height: 14pt;
 }
 
@@ -147,6 +145,70 @@ header div:nth-child(3) {
   color: #828282;
 }
 
+/* more section */
+.more {
+  padding-left: 3.6rem;
+  margin-bottom: 0;
+}
+
+.more a {
+  color: black !important;
+}
+
+/* footer section */
+footer {
+  border-top: 2px solid #f60;
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 91px;
+  font-size: 8pt;
+  margin: 0;
+}
+
+.footer-content ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer-content ul li {
+  padding-left: 0.3rem;
+}
+
+.footer-content ul li:after {
+  content: " | ";
+  line-height: 15px;
+  color: #828282;
+}
+
+.search-box {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.search-box input {
+  width: 100%;
+  outline: none;
+}
+
+.search-box input:focus {
+  border: 1px solid red;
+}
+
 /* Desktop view */
 @media screen and (min-width: 780px) {
   body {
@@ -178,5 +240,12 @@ header div:nth-child(3) {
   /* make list items takes full width of his container */
   .header-col-list ul {
     width: 100%;
+    padding-left: 1rem;
+  }
+
+  /* footer */
+  .search-box {
+    width: 20%;
+    outline: none;
   }
 }
