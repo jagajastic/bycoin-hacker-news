@@ -91,3 +91,34 @@ header div:nth-child(3) {
   padding-right: 0.7rem;
   padding-left: 0.7rem;
 }
+
+/* Desktop view */
+@media screen and (min-width: 780px) {
+  .main-container {
+    width: 85%;
+    margin: auto;
+  }
+
+  /* Hacker news  */
+  header div b {
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  /* target all li except the last item */
+  .header-col-list ul li:not(:last-child)::after {
+    content: "|";
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* make list items takes full width of his container */
+  .header-col-list ul {
+    width: 100%;
+  }
+}
