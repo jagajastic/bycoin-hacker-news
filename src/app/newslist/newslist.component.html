@@ -1,0 +1,50 @@
+<section class="main-content-container">
+  <div class="main-content" *ngFor="let new of news; let i = index">
+    <div class="content-children list-number">
+      <div class="number">{{ i + 1 }}.</div>
+      <div class="shape"></div>
+    </div>
+    <div class="content-children">
+      <div class="title">
+        <a href="{{ new.url }}">{{ new.title }}</a>
+        <a href="{{ new.url }}" class="twitter"
+          >({{ stripURL(new.url) ? stripURL(new.url) : new.url }})</a
+        >
+      </div>
+      <div class="sub-title">
+        <span>{{ new.score }} points</span>
+        by
+        <a
+          href="https://news.ycombinator.com/user?id={{ new.id ? new.id : '' }}"
+          class="twitter"
+          >{{ new.by.id }}
+        </a>
+        <span
+          ><a
+            href="https://news.ycombinator.com/item?{{ new.id ? new.id : '' }}"
+            class="twitter"
+          >
+            {{ timeAgo(new.time) }} hours ago</a
+          ></span
+        >
+        <span> | </span>
+        <a
+          href="https://news.ycombinator.com/hide?{{
+            new.id ? new.id : ''
+          }}&goto=news"
+          class="twitter"
+          >hide</a
+        >
+        <span> | </span>
+        <a
+          href="https://news.ycombinator.com/item?{{ new.id ? new.id : '' }}"
+          class="twitter"
+          >{{ new.kids.length }} comments</a
+        >
+      </div>
+    </div>
+  </div>
+  <span class="more">
+    <a href="#">More</a>
+  </span>
+</section>

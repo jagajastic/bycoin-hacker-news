@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 /* main table head  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -103,7 +108,7 @@ header div:nth-child(3) {
 
 .main-content-container {
   font-size: 11pt;
-  line-height: 14pt;
+  line-height: 10pt;
 }
 
 .list-number {
@@ -125,9 +130,14 @@ header div:nth-child(3) {
 }
 
 .main-content {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 14% 90%;
   margin: 0.8rem;
+}
+
+.content-children .title {
+  display: flex;
+  flex-direction: column;
 }
 
 .sub-title {
@@ -219,6 +229,9 @@ footer {
     margin: auto;
   }
 
+  .main-content {
+    grid-template-columns: 5% 90%;
+  }
   /* Hacker news  */
   header div b {
     font-weight: bold;
@@ -247,5 +260,11 @@ footer {
   .search-box {
     width: 20%;
     outline: none;
+  }
+
+  /* url */
+  .content-children .title {
+    display: flex;
+    flex-direction: row;
   }
 }
